@@ -12,7 +12,9 @@ import {
 
 export default function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
+
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
+
   const segmentProps = {
     type: "dynamic",
     canSleep: true,
@@ -155,6 +157,7 @@ export default function Band({ maxSpeed = 50, minSpeed = 10 }) {
           </group>
         </RigidBody>
       </group>
+
       <mesh ref={band}>
         <meshLineGeometry />
         <meshLineMaterial
